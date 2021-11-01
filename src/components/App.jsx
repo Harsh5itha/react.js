@@ -1,18 +1,21 @@
 import React from "react";
-import Login from "./Login";
-
-var isLoggedIn = false;
-
-const currentTime = new Date(2019, 11, 1, 9).getHours();
-console.log(currentTime);
+import Header from "./Header";
+import Footer from "./Footer";
+import Note from "./Note";
+import notes from "../notes";
 
 function App() {
   return (
-    <div className="container">
-      {/*Ternary Operator*/}
-      {isLoggedIn ? <h1>Hello</h1> : <Login />}
-      {/*AND Operator*/}
-      {currentTime > 12 && <h1>Why are you still working?</h1>}
+    <div>
+      <Header />
+      {notes.map((noteItem) => (
+        <Note
+          key={noteItem.key}
+          title={noteItem.title}
+          content={noteItem.content}
+        />
+      ))}
+      <Footer />
     </div>
   );
 }
