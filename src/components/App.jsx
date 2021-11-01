@@ -1,21 +1,32 @@
-import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Note from "./Note";
-import notes from "../notes";
+import React, { useState } from "react";
 
 function App() {
+  const [name, setName] = useState("");
+  const [headingText, setHeading] = useState("");
+
+  function handleChange(event) {
+    console.log(event.target.value);
+    setName(event.target.value);
+  }
+
+  function handleClick(event) {
+    setHeading(name);
+
+    event.preventDefault();
+  }
+
   return (
-    <div>
-      <Header />
-      {notes.map((noteItem) => (
-        <Note
-          key={noteItem.key}
-          title={noteItem.title}
-          content={noteItem.content}
+    <div className="container">
+      <h1>Hello {headingText}</h1>
+      <form onSubmit={handleClick}>
+        <input
+          onChange={handleChange}
+          type="text"
+          placeholder="What's your name?"
+          value={name}
         />
-      ))}
-      <Footer />
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 }
