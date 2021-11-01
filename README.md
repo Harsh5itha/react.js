@@ -4,3 +4,4 @@ Using Hook: <img src = "https://user-images.githubusercontent.com/45786603/13974
 Destructing: <img src ="https://user-images.githubusercontent.com/45786603/139746541-a123238a-a30c-466d-b673-2c4f84709cca.png">
 Forms Input: <img src ="https://user-images.githubusercontent.com/45786603/139748102-1b48113e-156e-4516-a4f4-11d4b0f671ca.png">
 Changing Complex state: <img src ="https://user-images.githubusercontent.com/45786603/139748690-752cd167-30f2-4793-a988-773b4c2694aa.png">
+ES6 Spread <img src ="https://user-images.githubusercontent.com/45786603/139749576-749d3254-c71a-42c4-8f7e-1e151689233f.png">
